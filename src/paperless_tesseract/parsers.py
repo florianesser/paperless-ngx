@@ -195,6 +195,7 @@ class RasterisedDocumentParser(DocumentParser):
             ocrmypdf_args["force_ocr"] = True
         elif settings.OCR_MODE in ["skip", "skip_noarchive"]:
             ocrmypdf_args["skip_text"] = True
+            ocrmypdf_args["invalidate_digital_signatures"] = True
         elif settings.OCR_MODE == "redo":
             ocrmypdf_args["redo_ocr"] = True
         else:
