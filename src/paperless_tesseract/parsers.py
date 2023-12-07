@@ -227,6 +227,7 @@ class RasterisedDocumentParser(DocumentParser):
             ModeChoices.SKIP_NO_ARCHIVE,
         }:
             ocrmypdf_args["skip_text"] = True
+            ocrmypdf_args["invalidate_digital_signatures"] = True
         elif self.settings.mode == ModeChoices.REDO:
             ocrmypdf_args["redo_ocr"] = True
         else:  # pragma: no cover
